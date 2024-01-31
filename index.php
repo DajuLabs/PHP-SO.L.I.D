@@ -8,7 +8,8 @@ require_once('./apiTotvs.php');
 
 
 $apiTotvs = new ApiTotvs();
-$uploadVendas = new UploadVendas($apiTotvs);
+$repository = new InMemoryRepositoryVendas(); //RepositoryVendas();
+$uploadVendas = new UploadVendas($apiTotvs, $repository);
 
 echo $uploadVendas->execute();
 
