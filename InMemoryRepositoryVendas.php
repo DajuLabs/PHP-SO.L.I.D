@@ -1,7 +1,7 @@
 <?php
   require_once('./IRepositoryVendas.php');
 
-  class RepositoryVendas implements IRepositoryVendas {
+  class InMemoryRepositoryVendas implements IRepositoryVendas {
     function create($name)
     {
       print_r('Do something doing creating on database');
